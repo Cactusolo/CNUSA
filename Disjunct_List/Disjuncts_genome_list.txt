@@ -1,0 +1,54 @@
+Castanea mollissima chloroplast / common:Chinese chestnut	NC_014674
+Juglans regia voucher JREG20151001 chloroplast / common:English walnut	NC_028617
+Liquidambar formosana chloroplast / common:Formosan gum	NC_023092
+Liriodendron tulipifera chloroplast	NC_008326
+Magnolia cathcartii chloroplast	NC_023234
+Magnolia dealbata chloroplast	NC_023235
+Magnolia denudata chloroplast / isolate:BJ006	NC_018357
+Magnolia grandiflora voucher NJ016 chloroplast	NC_020318
+Magnolia kobus chloroplast	NC_023237
+Magnolia kwangsiensis chloroplast	NC_015892
+Magnolia liliifera chloroplast	NC_023238
+Magnolia officinalis chloroplast	NC_020316
+Magnolia officinalis subsp. biloba voucher SC001 chloroplast / sub-species:biloba	NC_020317
+Magnolia pyramidata chloroplast	NC_023236
+Magnolia salicifolia chloroplast	NC_023240
+Magnolia sinica chloroplast	NC_023241
+Magnolia sprengeri chloroplast	NC_023242
+Magnolia tripetala plastid / isolate:UNL-06-06203	NC_024027
+Magnolia yunnanensis chloroplast	NC_024545
+Ostrya rehderiana chloroplast / type:DNA	NC_028349
+Picea abies chloroplast complete genome / common:Norway spruce	NC_021456
+Picea morrisonicola chloroplast	NC_016069
+Picea sitchensis chloroplast / isolate:PICSIT04; common:Sitka spruce	NC_011152
+Pinus bungeana voucher Pbungeana2015 chloroplast	NC_028421
+Pinus contorta chloroplast / isolate:CONT40; common:lodgepole pine	NC_011153
+Pinus gerardiana chloroplast / isolate:GERA04	NC_011154
+Pinus koraiensis chloroplast	NC_004677
+Pinus krempfii chloroplast / isolate:KREM03; common:Krempf's pine	NC_011155
+Pinus lambertiana chloroplast / isolate:LAMB08; common:sugar pine	NC_011156
+Pinus longaeva chloroplast / isolate:LONG01	NC_011157
+Pinus massoniana chloroplast	NC_021439
+Pinus monophylla chloroplast / isolate:MONO10	NC_011158
+Pinus nelsonii chloroplast / isolate:NELS03	NC_011159
+Pinus sibirica chloroplast	NC_028552
+Pinus strobus plastid / common:Eastern white pine	NC_026302
+Pinus tabuliformis voucher PTAB20150818V5 chloroplast	NC_028531
+Pinus taeda chloroplast / common:loblolly pine	NC_021440
+Pinus taiwanensis voucher Ptaiwanensis14 chloroplast	NC_027415
+Pinus thunbergii chloroplast / common:Japanese black pine	NC_001631
+Populus alba chloroplast	NC_008235
+Populus balsamifera chloroplast	NC_024735
+Populus euphratica chloroplast / common:Euphrates poplar	NC_024747
+Populus fremontii chloroplast	NC_024734
+Populus tremula clone W52 chloroplast	NC_027425
+Populus tremula x Populus alba clone INRA 717-1B4 chloroplast / type:DNA	NC_028504
+Populus trichocarpa chloroplast / common:black cottonwood	NC_009143
+Quercus aliena chloroplast / type:DNA	NC_026790
+Quercus aquifolioides chloroplast	NC_026913
+Quercus rubra plastid / common:northern red oak	NC_020152
+Quercus spinosa chloroplast / type:DNA	NC_026907
+Robinia pseudoacacia chloroplast	NC_026684
+UNVERIFIED: Populus cathayana chloroplast sequence	NC_027091
+UNVERIFIED: Populus yunnanensis chloroplast sequence	NC_027092
+Wisteria floribunda voucher IRGC105690 chloroplast / common:Japanese wisteria	NC_027677
