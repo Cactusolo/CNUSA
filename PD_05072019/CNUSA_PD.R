@@ -129,3 +129,28 @@ data <- uu
 name <- "CN"
 
 PD_caculator(CN.tree, name, data)
+
+#############PD_for_disjunctCN######################
+tree <- read.tree("./data/CN_US_speciesname_BR_addMay52019.tre")
+data <- read.csv("./result/CN_US.dismatrx_present_absent.csv", header = TRUE)
+name <- "CN2USA_dis"
+row.names(data) <- as.character(data[,1])
+data <- data[,-1]
+tree$tip.label <- gsub("-", ".", tree$tip.label)
+
+PD_caculator(tree, name, data)
+
+#####################CN_dis##############################
+
+CN.tree <- read.tree("./data/Whole_CN_190510_ed.tre")
+
+CN.tree$tip.label <- gsub("-", ".", CN.tree$tip.label)
+name <- "CN_dis"
+PD_caculator(CN.tree, name, data)
+
+#####################US_dis##############################
+
+US.tree <- read.tree("./data/Whole_US_BR_addMay52019.tre")
+US.tree$tip.label <- gsub("-", ".", US.tree$tip.label)
+name <- "US_dis"
+PD_caculator(US.tree, name, data)
