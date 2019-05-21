@@ -89,11 +89,13 @@ PD_caculator(US.tree, name, data)
 ###################PD_for_life_form################################
 
 tree <- read.tree("./data/CN_US_speciesname_BR_addMay52019.tre")
-tt <- read.csv("./result/CN_USA_WH_matrix.csv", header = TRUE)
+tt <- read.csv("./result/CN_US_LifeForm_checked_matrix.csv", header = TRUE)
+tt<- tt[,-1]
 tt <- t(tt)
-colnames(tt) <- tt[1,]
-tt<- tt[-1,]
+colnames(tt) <- tt[3,]
+tt<- tt[-3,]
 name <- "CN_US_LifeForm"
+tree$tip.label <- gsub("-", ".", tree$tip.label)
 
 PD_caculator(tree, name, tt)
 
@@ -154,3 +156,7 @@ US.tree <- read.tree("./data/Whole_US_BR_addMay52019.tre")
 US.tree$tip.label <- gsub("-", ".", US.tree$tip.label)
 name <- "US_dis"
 PD_caculator(US.tree, name, data)
+
+#######################life_form_11sites##################
+lifeform <- read
+

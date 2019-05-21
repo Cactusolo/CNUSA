@@ -186,3 +186,50 @@ colnames(CN_US.dismatrx) <- CN_US.dismatrx[1,]
 CN_US.dismatrx <- CN_US.dismatrx[-1,]
 # dir.create("result_matrix")
 write.csv(CN_US.dismatrx, "result/CN_US.dismatrx_present_absent.csv", quote = FALSE)
+
+########################US_CN_11_site####################################
+tree <- read.tree("./data/CN_US_speciesname_BR_addMay52019.tre")
+CN_US_species <- tree$tip.label
+
+site.cn_us <- read.csv("./result/CNUS11_NW_checked_matrix.csv", header = TRUE)
+row.names(site.cn_us) <- site.cn_us[,2]
+site.cn_us <- site.cn_us[,-2]
+site.cn_us <- site.cn_us[,-1]
+
+lifeform <- read.csv("./result/CN_US_LifeForm_checked_matrix.csv", header = TRUE)
+lifeform <- t(lifeform)
+lifeform  <- as.data.frame(lifeform)
+names(lifeform) <- as.character(unlist(lifeform[1,]))
+lifeform <- lifeform[-1,]
+# woody <- names(lifeform[which(lifeform$Woody == 1),][,1])
+# herb <- names(lifeform[which(lifeform$Herb == 1),][,2])
+
+trouble <- lifeform %>% mutate(Species=row.names(lifeform)) %>%  filter(Woody==0 & Herb==0)
+no.trouble <- lifeform %>% mutate(Species=row.names(lifeform)) %>%  filter(Woody==1 | Herb==1)
+# write.csv(trouble, "./result/species_noherb_nowoody.csv", quote = F)
+other.data <- read.csv("./data/species_noherb_nowoody_Hanyang.csv", header = TRUE, stringsAsFactors = F)
+other.data <- other.data[,-1]
+
+lifeform.new <- rbind.data.frame(no.trouble, other.data)
+
+write.csv(lifeform.new, "./result/CN_US_LifeForm_checked_matrix.csv", quote = FALSE)
+
+lifeform <- lifeform.new
+woody <- lifeform[which(lifeform$Woody == 1),]$Species
+herb <- lifeform[which(lifeform$Herb == 1),]$Species
+
+
+lfmtrx <- list()
+for(i in 1:length(row.names(site.cn_us))){
+  Species.s <- names(site.cn_us[i,which(site.cn_us[i,]==1)])
+
+  name <- row.names(site.cn_us)[i]
+  ifelse(sum(c(Species.s %in% woody, Species.s %in% herb))==length(Species.s), print("YES"), print(paste(name, ",", "NO")))
+  dat <- as.data.frame(Species.s)
+  names(dat) <- "Species"
+  dat <- mutate(dat, Woody=ifelse(Species.s %in% woody, 1, 0), Herb=ifelse(Species.s %in% herb, 1, 0)) %>% arrange(Species)
+  
+  lfmtrx[[name]] <- dat
+}
+
+saveRDS(lfmtrx, "./result/CN_US_11site_WH.rds")
