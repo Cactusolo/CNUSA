@@ -1,0 +1,139 @@
+############ logPD ~ Latitute ##################
+Call:
+lm(formula = log(PD) ~ Latitute)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.40610 -0.28000  0.08144  0.23669  0.39702 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 11.36579    0.66033   17.21  3.4e-08 ***
+Latitute    -0.03695    0.01820   -2.03   0.0729 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3203 on 9 degrees of freedom
+Multiple R-squared:  0.314,	Adjusted R-squared:  0.2378 
+F-statistic:  4.12 on 1 and 9 DF,  p-value: 0.07295
+
+
+
+############ logPD ~ Longitude ##################
+Call:
+lm(formula = log(PD) ~ Longitude)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.50109 -0.16685  0.09341  0.17324  0.27077 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 1.001e+01  8.200e-02 122.110 8.41e-16 ***
+Longitude   2.535e-03  8.268e-04   3.066   0.0134 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2705 on 9 degrees of freedom
+Multiple R-squared:  0.5109,	Adjusted R-squared:  0.4565 
+F-statistic:   9.4 on 1 and 9 DF,  p-value: 0.01344
+
+
+############ logPD ~ Longitude_absolute ##################
+Call:
+lm(formula = log(PD) ~ Longitude_absolute)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.39027 -0.22109  0.07481  0.14891  0.36852 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(>|t|)    
+(Intercept)        8.844106   0.403372  21.925 4.03e-09 ***
+Longitude_absolute 0.012313   0.004067   3.028   0.0143 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2722 on 9 degrees of freedom
+Multiple R-squared:  0.5046,	Adjusted R-squared:  0.4495 
+F-statistic: 9.166 on 1 and 9 DF,  p-value: 0.0143
+
+############ logPD ~ Species ##################
+Call:
+lm(formula = log(PD) ~ Species)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.16848 -0.05104  0.02011  0.06299  0.09833 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 9.271e+00  6.971e-02  133.00 3.90e-16 ***
+Species     9.036e-04  7.491e-05   12.06 7.37e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.09334 on 9 degrees of freedom
+Multiple R-squared:  0.9417,	Adjusted R-squared:  0.9353 
+F-statistic: 145.5 on 1 and 9 DF,  p-value: 7.368e-07
+
+
+############ logPD ~ D ##################
+Call:
+lm(formula = log(PD) ~ D)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.27631 -0.16712 -0.04521  0.09643  0.39310 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 9.156720   0.238237  38.435 2.71e-11 ***
+D           0.004365   0.001124   3.885   0.0037 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2364 on 9 degrees of freedom
+Multiple R-squared:  0.6264,	Adjusted R-squared:  0.5849 
+F-statistic: 15.09 on 1 and 9 DF,  p-value: 0.003705
+
+
+############ logPD ~ MAP ##################
+Call:
+lm(formula = log(PD) ~ MAP)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.71482 -0.18999  0.04249  0.27155  0.53765 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 9.8576998  0.3788406  26.021 8.82e-10 ***
+MAP         0.0001452  0.0002878   0.504    0.626    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3814 on 9 degrees of freedom
+Multiple R-squared:  0.0275,	Adjusted R-squared:  -0.08055 
+F-statistic: 0.2545 on 1 and 9 DF,  p-value: 0.626
+
+
+
+############ logPD ~ MAT ##################
+Call:
+lm(formula = log(PD) ~ MAT)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.59194 -0.25098  0.00559  0.32417  0.48945 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  9.83500    0.26173  37.577 3.32e-11 ***
+MAT          0.01845    0.02131   0.866    0.409    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3716 on 9 degrees of freedom
+Multiple R-squared:  0.0769,	Adjusted R-squared:  -0.02567 
+F-statistic: 0.7497 on 1 and 9 DF,  p-value: 0.409

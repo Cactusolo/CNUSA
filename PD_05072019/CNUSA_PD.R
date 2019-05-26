@@ -4,6 +4,8 @@ rm(list=ls())
 # install.package("picante"）
 library("picante")
 library("phytools")
+library("ape")
+library("tidyverse")
 
 PD_caculator <- function(phy, name, data){
   comm <- NULL
@@ -158,5 +160,37 @@ name <- "US_dis"
 PD_caculator(US.tree, name, data)
 
 #######################life_form_11sites##################
-lifeform <- read
 
+tree <- read.tree("./data/CN_US_speciesname_BR_addMay52019.tre")
+tree$tip.label <- gsub("-", ".", tree$tip.label)
+
+disjuct <- read.csv("./result/CN_US.dismatrx_present_absent.csv", header = TRUE)
+disjuct <- t(disjuct)
+row.names(disjuct) <- 
+colnames(disjuct) <- disjuct[1,]
+disjuct <- disjuct[-1,]
+disjuct <- as.data.frame(disjuct)
+disjuct.species <- disjuct %>% mutate(species=row.names(disjuct)) %>% filter(disjun_sp==1) %>% 
+  select(species)
+disjuct.species <- disjuct.species$species
+
+no.disjuct.species <- disjuct %>% mutate(species=row.names(disjuct)) %>% filter(Non_disjun==1) %>% 
+  select(species)
+
+no.disjuct.species <- no.disjuct.species$species
+
+tt <- read.csv("./result/CNUS11_NW_checked_matrix.csv", header = TRUE)
+
+row.names(tt) <- as.character(tt[,1])
+
+tt <- tt[,-1]
+tt <- tt[,-1]
+
+aa <- tt[,colnames(tt) %in% disjuct.species]
+bb <- tt[,colnames(tt) %in% no.disjuct.species]
+
+name <- "CNUS_11disonly"
+PD_caculator(tree, name, aa)
+
+name <- "CNUS_11_NO_dis"
+PD_caculator(tree, name, bb)

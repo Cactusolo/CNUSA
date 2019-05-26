@@ -3,12 +3,13 @@ library("picante")
 library("phytools")
 library("cluster")
 library("phyr")
+library("pheatmap")
 # install.packages("https://raw.githubusercontent.com/daijiang/phyr/master/phyr_0.1.5.zip", repos = NULL)
 # devtools::install_github("daijiang/phyr")
 # install.packages("https://raw.githubusercontent.com/daijiang/phyr/master/phyr_0.1.5.tgz", repos = NULL)
-PD_caculator <- function(data, tree, name){
+PD_beta_caculator <- function(data, tree, name){
   comm <- NULL
-  if(is.ultrametric(tree)!=TRUE){
+  if(!is.ultrametric(tree)){
     tree <- force.ultrametric(tree, method="extend")
   }
   phy <- tree
@@ -24,11 +25,11 @@ PD_caculator <- function(data, tree, name){
   
   cat("Calculates inter-community mean pairwise distance --- comdist ...\n")
   comdist.result <- comdist(comm, phy.dist)
-  comdist.clusters <- hclust(comdist.result)
+  # comdist.clusters <- hclust(comdist.result)
   
   cat("Calculates inter-community mean nearest taxon distance --- comdistnt  ...\n")
   comdistnt.result <- comdistnt(comm, phy.dist)
-  comdistnt.clusters <- hclust(comdistnt.result)
+  # comdistnt.clusters <- hclust(comdistnt.result)
   
   cat("Calculates Phylogenetic Community Dissimilarity --- pcd  ...\n")
   pcd.result <- phyr::pcd(comm, tree)
@@ -36,14 +37,13 @@ PD_caculator <- function(data, tree, name){
   cat("Calculates Unweighted UniFrac distance between communities --- UniF ...\n")
   Unif <- unifrac(comm, tree)
   
-  pdf(paste0("result/Beta_diversity/", name, "beta_diversity_plot.pdf"), height = 6, width = 4)
-  # par(mfrow = c(1, 2))
-  plot(comdist.clusters, main=paste0(name, " sites"), sub="MPD_beta", xlab="")
-  # axis(2, at = c(0, axTicks(2)), cex.axis = 0.8, mgp = c(3, 0.7, 0.5))
-  # plot(as.dendrogram(comdistnt.clusters), horiz=TRUE, main="CN-US 11 sites mean nearest taxon distance", sub="Beta Diversity", xlab="")
-  plot(comdistnt.clusters, main=paste0(name," sites"), sub="MNTD_beta", xlab="")
+  pdf(paste0("result/Beta_diversity/", name, "beta_diversity_plot2.pdf"), height = 6, width = 6)
+  
+  pheatmap(as.matrix(pcd.result$PCD), display_numbers = T, number_format = "%.4f", fontsize = 10, main="PCD")
 
-dev.off()
+  pheatmap(as.matrix(Unif), display_numbers = T, number_format = "%.4f", fontsize = 10, main="Unif")
+
+  dev.off()
 
   #write out table
   write.table(as.matrix(comdist.result), paste0("./result/Beta_diversity/", name, "_comdist.csv", sep=""), quote = FALSE, sep = ",")
@@ -88,4 +88,9 @@ name <- "CN_5"
 tree <- CN.tree
 PD_caculator(data,CN.tree, name)
 
+#################################
+name <- "CNUS_11disonly"
+PD_beta_caculator(aa, tree, name)
 
+name <- "CNUS_11_NO_dis"
+PD_beta_caculator(bb, tree, name)

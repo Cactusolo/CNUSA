@@ -1,0 +1,130 @@
+############### SES.PD ~ Latitute ################
+Call:
+lm(formula = SES.PD ~ Latitute)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.3313 -1.8002  0.1541  1.2628  3.5047 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)   8.6303     4.6859   1.842   0.0986 .
+Latitute     -0.3546     0.1292  -2.745   0.0227 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.273 on 9 degrees of freedom
+Multiple R-squared:  0.4557,	Adjusted R-squared:  0.3953 
+F-statistic: 7.536 on 1 and 9 DF,  p-value: 0.02265
+
+############### SES.PD ~ Longitude ################
+Call:
+lm(formula = SES.PD ~ Longitude)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.2580 -1.4243  0.8207  1.8616  4.2584 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)   
+(Intercept) -4.133838   0.926135  -4.464  0.00157 **
+Longitude    0.003686   0.009337   0.395  0.70220   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 3.055 on 9 degrees of freedom
+Multiple R-squared:  0.01702,	Adjusted R-squared:  -0.0922 
+F-statistic: 0.1558 on 1 and 9 DF,  p-value: 0.7022
+
+############### SES.PD ~ Longitude_absolute ################
+Call:
+lm(formula = SES.PD ~ Longitude_absolute)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-5.172 -1.532  0.672  1.846  4.419 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(>|t|)
+(Intercept)        -5.18726    4.55044  -1.140    0.284
+Longitude_absolute  0.01124    0.04588   0.245    0.812
+
+Residual standard error: 3.071 on 9 degrees of freedom
+Multiple R-squared:  0.006629,	Adjusted R-squared:  -0.1037 
+F-statistic: 0.06005 on 1 and 9 DF,  p-value: 0.8119
+
+############### SES.PD ~ Species ################
+Call:
+lm(formula = SES.PD ~ Species)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-5.337 -1.639  1.270  1.717  4.021 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept) -5.604939   2.234166  -2.509   0.0334 *
+Species      0.001773   0.002401   0.739   0.4790  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.992 on 9 degrees of freedom
+Multiple R-squared:  0.05714,	Adjusted R-squared:  -0.04763 
+F-statistic: 0.5454 on 1 and 9 DF,  p-value: 0.479
+
+############### SES.PD ~ D ################
+Call:
+lm(formula = SES.PD ~ D)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-3.868 -2.402  1.351  2.169  3.301 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) -7.86132    2.81278  -2.795   0.0209 *
+D            0.01862    0.01327   1.403   0.1941  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.791 on 9 degrees of freedom
+Multiple R-squared:  0.1795,	Adjusted R-squared:  0.08831 
+F-statistic: 1.969 on 1 and 9 DF,  p-value: 0.1941
+
+############### SES.PD ~ MAP ################
+Call:
+lm(formula = SES.PD ~ MAP)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.7381 -1.5015  0.3572  1.3278  3.0142 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -10.330064   2.146954  -4.811 0.000958 ***
+MAP           0.004970   0.001631   3.048 0.013844 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.161 on 9 degrees of freedom
+Multiple R-squared:  0.5079,	Adjusted R-squared:  0.4532 
+F-statistic: 9.289 on 1 and 9 DF,  p-value: 0.01384
+
+############### SES.PD ~ MAT ################
+Call:
+lm(formula = SES.PD ~ MAT)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.8761 -1.8218 -0.5824  2.2303  3.2222 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)   
+(Intercept)  -7.4038     1.7947  -4.125  0.00258 **
+MAT           0.2980     0.1461   2.040  0.07179 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.548 on 9 degrees of freedom
+Multiple R-squared:  0.3161,	Adjusted R-squared:  0.2402 
+F-statistic: 4.161 on 1 and 9 DF,  p-value: 0.07179
