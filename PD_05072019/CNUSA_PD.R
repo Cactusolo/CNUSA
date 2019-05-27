@@ -159,14 +159,13 @@ US.tree$tip.label <- gsub("-", ".", US.tree$tip.label)
 name <- "US_dis"
 PD_caculator(US.tree, name, data)
 
-#######################life_form_11sites##################
-
+########################Disjuct_11site_##################################
 tree <- read.tree("./data/CN_US_speciesname_BR_addMay52019.tre")
 tree$tip.label <- gsub("-", ".", tree$tip.label)
 
 disjuct <- read.csv("./result/CN_US.dismatrx_present_absent.csv", header = TRUE)
 disjuct <- t(disjuct)
-row.names(disjuct) <- 
+
 colnames(disjuct) <- disjuct[1,]
 disjuct <- disjuct[-1,]
 disjuct <- as.data.frame(disjuct)
