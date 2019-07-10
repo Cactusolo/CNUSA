@@ -1,0 +1,10 @@
+White_Mountain 
+Searched: gbif
+Occurrences - Found: 73, Returned: 73
+Search type: Scientific
+  gbif: Tracheophyta (73)
+Mountain_Lake 
+Searched: gbif
+Occurrences - Found: 302, Returned: 302
+Search type: Scientific
+  gbif: Tracheophyta (302)

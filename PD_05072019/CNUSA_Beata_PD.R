@@ -67,6 +67,20 @@ name <- "CNUS_11"
 
 PD_caculator(data, tree, name)
 
+# rerun plot
+PCD <- read.csv(paste0("result/Beta_diversity/", name, "_PCD_matrix.csv", sep=""), header=T)
+Unif <- read.csv(paste0("result/Beta_diversity/", name, "_UniFrac.csv", sep=""), header=T)
+
+pdf(paste0("result/Beta_diversity/", name, "beta_diversity_plot2.pdf"), height = 6, width = 6)
+
+pheatmap(as.matrix(PCD), display_numbers = T, number_format = "%.4f", fontsize = 10, main="PCD")
+
+pheatmap(as.matrix(Unif), display_numbers = T, number_format = "%.4f", fontsize = 10, main="Unif")
+
+dev.off()
+
+
+
 #US_whole
 tree <- read.tree("./data/Whole_US_BR_addMay52019.tre")
 tree$tip.label <- gsub("-", ".", tree$tip.label)
