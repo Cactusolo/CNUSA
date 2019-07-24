@@ -1,0 +1,16 @@
+Alisma_plantago-aquatica
+Aster_novae-angliae
+Aster_novi-belgii
+Athyrium_filix-femina
+Athyrium_filix-femina_var._aspenioides
+Capsella_bursa-pastoris
+Carex_austro-caroliniana
+Carex_meritt-fernaldii
+Carex_novae-angliae
+Dolichandra_unguis-cati
+Hypericum_crux-andreae
+Lychnis_flos-cuculi
+Narcissus_pseudo-narcissus
+Robinia_pseudo-acacia
+Smilax_bona-nox
+Zanthoxylum_clava-herculis

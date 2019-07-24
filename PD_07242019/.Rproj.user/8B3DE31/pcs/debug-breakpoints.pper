@@ -1,0 +1,21 @@
+{
+    "debugBreakpointsState" : {
+        "breakpoints" : [
+            {
+                "editor_line_number" : 50,
+                "editor_state" : 2,
+                "function_name" : "PD_beta_caculator",
+                "function_steps" : "",
+                "id" : 0,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 50,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/Desktop/CNUSA/PD_07202019/Beta_PD_calculation.R",
+                "state" : 2,
+                "type" : 0
+            }
+        ]
+    }
+}

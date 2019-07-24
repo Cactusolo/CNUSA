@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1563904402557.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "12|28|14|2|\n101|22|123|0|\n",
+    "hash" : "94265818",
+    "id" : "73F46430",
+    "lastKnownWriteTime" : 1563937896,
+    "last_content_update" : 1563937896624,
+    "path" : "~/Desktop/PD_07242019/Beta_PD_calculation.R",
+    "project_path" : "Beta_PD_calculation.R",
+    "properties" : {
+        "cursorPosition" : "65,0",
+        "scrollLine" : "62",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
